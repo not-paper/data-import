@@ -2,6 +2,10 @@ package tech.notpaper.mws.util.db.connectionmanagement;
 
 public class ConnectionManagerFactory {
 	
+	public static ConnectionManager getMySqlConnectionManager(String dataSource) {
+		return new MySqlConnectionManager(dataSource);
+	}
+	
 	public static ConnectionManager getMySqlConnectionManager(String host, String port, String user, String pass, String db) {
 		return new MySqlConnectionManager(host, port, user, pass, db);
 	}
